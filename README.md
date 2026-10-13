@@ -1,4 +1,4 @@
-# MEA-BOKO-kidst-facebook-bot
+# MEAKIDST central link page
 
 # KIDST AI Assistant
 
