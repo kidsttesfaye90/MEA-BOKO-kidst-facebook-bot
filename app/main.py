@@ -6,7 +6,7 @@ from app.config import settings
 app = FastAPI(
     title="KIDMEA-BOKO",
     version="0.1.0",
-    description="General digital market, B2B brokerage, and business services platform.",
+    description="KIDMEA-BOKO general digital market, B2B brokerage, and business services platform.",
     docs_url="/docs",
     redoc_url="/redoc",
 )
@@ -26,6 +26,15 @@ async def health() -> dict[str, str]:
         "status": "ok",
         "service": "KIDMEA-BOKO",
         "environment": settings.environment,
+    }
+
+
+@app.get("/health/db")
+async def health_db() -> dict[str, str]:
+    return {
+        "status": "ok",
+        "database": "not-configured-for-live-check",
+        "service": "KIDMEA-BOKO",
     }
 
 
